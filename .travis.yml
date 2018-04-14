@@ -1,6 +1,4 @@
-language:        node_js
-node_js:         8
-jdk:             oraclejdk8
+
 sudo:            true
 dist:            trusty
 
@@ -8,6 +6,5 @@ env:
   - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
 
 before_install:
-- openssl aes-256-cbc -K $encrypted_bf14593fbaa3_key -iv $encrypted_bf14593fbaa3_iv -in assets/server.key.enc -out assets/server.key -d
 - wget -qO- $URL | tar xJf -
 - ./sfdx/install
