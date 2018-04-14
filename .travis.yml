@@ -2,9 +2,6 @@
 sudo:            true
 dist:            trusty
 
-env:
-  - URL=https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
-
 before_install:
-- wget -qO- $URL | tar xJf -
+- wget -qO- https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz | tar xJf -
 - ./sfdx/install
