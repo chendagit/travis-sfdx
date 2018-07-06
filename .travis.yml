@@ -8,6 +8,7 @@ node_js:
 jdk:
 - oraclejdk8
 before_script:
+- brew install yarn
 - npm install -g eslint
 - npm install -g jasmine-core
 - npm install -g karma
