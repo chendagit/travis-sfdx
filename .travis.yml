@@ -16,3 +16,5 @@ before_script:
 - npm install -g karma-jasmine
 - npm install -g karma-jasmine-jquery
 - npm install -g karma-phantomjs-launcher
+script:
+- node -v
