@@ -8,7 +8,7 @@ node_js:
 jdk:
 - oraclejdk8
 before_script:
-- travis_retry() {if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install -g eslint; fi}
+- travis_retry [if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then npm install -g eslint; fi]
 - brew install yarn
 - npm install -g eslint
 - npm install -g jasmine-core
