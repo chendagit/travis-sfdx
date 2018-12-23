@@ -3,9 +3,9 @@ language: node_js
 node_js:
 - 10
 before_script:
-- if [type.cron != false]; then
+- 'if [[ "$TRAVIS_BRANCH" = "master" && ("$TRAVIS_PULL_REQUEST" || "$TRAVIS_PUSH" != "true") ]]; then
       npm install -g eslint;
-  fi
+  fi'
 # - npm install -g eslint
 # - npm install -g jasmine-core
 # - npm install -g karma
