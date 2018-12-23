@@ -12,7 +12,7 @@ before_script:
       npm install -g eslint;
   fi
 # - npm install -g eslint
-# - npm install -g jasmine-core
+# - npm install -g jasmine-core 
 # - npm install -g karma
 # - npm install -g karma-coverage
 # - npm install -g karma-jasmine
