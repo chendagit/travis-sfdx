@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - 10
 before_script:
-- if [[ type = cron ]]; then
+- if [[ "$TRAVIS_CRON" != "false" ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
