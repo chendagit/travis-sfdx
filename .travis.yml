@@ -1,18 +1,13 @@
-os: osx
-env:
-  global:
-  - CXX=g++
+dist:            trusty
 language: node_js
 node_js:
 - 10
-jdk:
-- oraclejdk8
 before_script:
-- if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" != "true" && "$TRAVIS_PUSH" != "true" ]]; then
+- if [[ "$TRAVIS_BRANCH" = "master" && ("$TRAVIS_PULL_REQUEST"  != "true" || "$TRAVIS_PUSH" != "true") ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
-# - npm install -g jasmine-core
+# - npm install -g jasmine-core 
 # - npm install -g karma
 # - npm install -g karma-coverage
 # - npm install -g karma-jasmine
