@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - 10
 before_script:
-- if [[ "$TRAVIS_BRANCH" = "master" && ("$TRAVIS_PULL_REQUEST"  = "false" || "$TRAVIS_PUSH" != "true") ]]; then
+- if [[  ("$TRAVIS_PULL_REQUEST" || "$TRAVIS_PUSH" != "true") && "$TRAVIS_BRANCH" = "master" ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
