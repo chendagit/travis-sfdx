@@ -8,7 +8,7 @@ node_js:
 jdk:
 - oraclejdk8
 before_script:
-- if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" != "true" && "$TRAVIS_PUSH" = "false" ]]; then
+- if [[ "$TRAVIS_BRANCH" = "master" && "$TRAVIS_PULL_REQUEST" = "false" && "$TRAVIS_PUSH" = "false" ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
