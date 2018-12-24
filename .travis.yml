@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - 10
 before_script:
-- if [[ ("$TRAVIS_PULL_REQUEST" = "false") || ("$TRAVIS_PUSH" = "false") ]]; then
+- if [[ ("$TRAVIS_PULL_REQUEST" = "false") && ("$TRAVIS_PUSH" = "false") ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
