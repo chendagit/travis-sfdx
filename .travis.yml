@@ -18,7 +18,7 @@ jobs:
     - stage: "Unit-tests"               
       name: "Unit Tests"           
       before_script: 
-      - pm install -g eslint
+      - npm install -g eslint
       - npm install -g jasmine-core
     - stage: "Lightning-functionality-test-automation"               
       name: "Lightning Test Automation"           
