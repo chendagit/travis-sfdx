@@ -13,5 +13,22 @@ before_script:
 # - npm install -g karma-jasmine
 # - npm install -g karma-jasmine-jquery
 # - npm install -g karma-phantomjs-launcher
+jobs:
+  include:
+    - stage: "UnitTests"               
+      name: "Unit Tests"           
+      script: 
+      - pm install -g eslint
+      - npm install -g jasmine-core
+    - stage: "LexAutomation"               
+      name: "Lightning Test Automation"           
+      script: 
+      - npm install -g karma
+      - npm install -g karma-jasmine
+    - stage: "ClassicAutomation"
+      name: "Classic Test Automation"
+      script:
+      - npm install -g karma-jasmine-jquery
+      -  npm install -g karma-phantomjs-launcher
 script:
 - node -v
