@@ -17,18 +17,18 @@ jobs:
   include:
     - stage: "Unit-tests"               
       name: "Unit Tests"           
-      script: 
-      - npm install -g eslint
+      before_script: 
+      - pm install -g eslint
       - npm install -g jasmine-core
     - stage: "Lightning-functionality-test-automation"               
       name: "Lightning Test Automation"           
-      script: 
+      before_script: 
       - npm install -g karma
       - npm install -g karma-jasmine
     - stage: "Classic-functionality-test-automation"
       name: "Classic Test Automation"
-      script:
+      before_script:
       - npm install -g karma-jasmine-jquery
-      -  npm install -g karma-phantomjs-launcher
+      - npm install -g karma-phantomjs-launcher
 script:
 - node -v
