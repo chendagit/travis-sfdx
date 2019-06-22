@@ -3,7 +3,7 @@ language: node_js
 node_js:
 - 10
 before_script:
-- if [ "$TRAVIS_COMMIT_MESSAGE" == *"lightning"* ] || [ "$TRAVIS_COMMIT_MESSAGE" == *"classic1"* ]; then
+- if [[ "$TRAVIS_COMMIT_MESSAGE" == *"lightning"* ]]; then
       npm install -g eslint;
   fi
 # - npm install -g eslint
