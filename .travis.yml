@@ -18,17 +18,20 @@ jobs:
     - stage: "Unit-tests"               
       name: "Unit Tests"           
       before_script: 
+      - if [[ "$TRAVIS_EVENT_TYPE" != "cron"  ]]; then
+          travis_terminate 0;
+        fi
       - npm install -g eslint
       - npm install -g jasmine-core
-    - stage: "Lightning-functionality-test-automation"               
-      name: "Lightning Test Automation"           
-      before_script: 
-      - npm install -g karma
-      - npm install -g karma-jasmine
-    - stage: "Classic-functionality-test-automation"
-      name: "Classic Test Automation"
-      before_script:
-      - npm install -g karma-jasmine-jquery
-      - npm install -g karma-phantomjs-launcher
+#     - stage: "Lightning-functionality-test-automation"               
+#       name: "Lightning Test Automation"           
+#       before_script: 
+#       - npm install -g karma
+#       - npm install -g karma-jasmine
+#     - stage: "Classic-functionality-test-automation"
+#       name: "Classic Test Automation"
+#       before_script:
+#       - npm install -g karma-jasmine-jquery
+#       - npm install -g karma-phantomjs-launcher
 script:
 - node -v
